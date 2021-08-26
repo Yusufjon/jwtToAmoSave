@@ -1,0 +1,6 @@
+{
+    "require": {
+        "firebase/php-jwt": "^5.4",
+        "dotzero/amocrm": "^0.3.29"
+    }
+}
