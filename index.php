@@ -13,35 +13,21 @@ mI8PM+J9b+6K6QGSqQZaJt6TUHD+rwEEzo57AyNF0oJg6I4VL/zbo5VzLFEoWX24
 vraQ7oPt7RWnBJZAI63cXYLk1Pb5yYha0MMlh+O4yD1RhZ2iAMcjKfwdiLn4fXCP
 cwIDAQAB
 -----END PUBLIC KEY-----";
-
-
 $jwt = file_get_contents("php://input");
-/*$jwt = "eyJraWQiOiI0X1h4SV9aRyIsImFsZyI6IlJTMjU2In0.eyJkYXRhIjoie1wiZGF0YVwiOlwie1xcXCJyZWFzb25cXFwiOlxcXCJNRU1CRVJfQ0FOQ0VMTEVEXFxcIixcXFwiYm9va2luZ1xcXCI6e1xcXCJpZFxcXCI6XFxcIjAwMjI3YjIxLWYwMjgtNDZmOS1iZDFlLWU4NWM3MTE4NTkzMFxcXCIsXFxcImJvb2tlZEVudGl0eVxcXCI6e1xcXCJzZXJ2aWNlSWRcXFwiOlxcXCI4ZDEzZDgxZC01NDYxLTQ5ZTctYjlmOC0zOTQyMWRmNDllNjRcXFwiLFxcXCJzY2hlZHVsZUlkXFxcIjpcXFwiYTMxNmQxMzgtOTE1Ni00NWI2LTg1ZjEtNWJkNmY3M2ViZmU1XFxcIixcXFwic2luZ2xlU2Vzc2lvblxcXCI6e1xcXCJzZXNzaW9uSWRcXFwiOlxcXCIybW1vVzB2d0tjU0Z5eHRPZkNkTWVIVlRLMGJjclgyZHpCR3BudDJsd2lDaTFxNkl6NDJ4aXFCcWJiTm1FTW9OZ2lHTkg1Y3U3M1I2SmNsS2dZTnRCMGQyUGdWa3NJb3lLM0t2XFxcIixcXFwic3RhcnRcXFwiOlxcXCIyMDIxLTA4LTI3VDEzOjAwOjAwWlxcXCIsXFxcImVuZFxcXCI6XFxcIjIwMjEtMDgtMjdUMTQ6MDA6MDBaXFxcIn0sXFxcInRpdGxlXFxcIjpcXFwi0KPRgNC-0LrQuCDQsNC90LPQu9C40LnRgdC60L7Qs9C-INGP0LfRi9C60LAg0LTQu9GPINC90LDRh9C40L3QsNGO0YnQuNGFXFxcIixcXFwibG9jYXRpb25cXFwiOntcXFwibG9jYXRpb25UeXBlXFxcIjpcXFwiT1dORVJfQlVTSU5FU1NcXFwiLFxcXCJidXNpbmVzc0xvY2F0aW9uXFxcIjp7XFxcImlkXFxcIjpcXFwiYjc0NWExNTAtYmVjNy00NTQ2LTg2NTEtMjMwNzRmMWQxZDYzXFxcIixcXFwibmFtZVxcXCI6XFxcIkxvY2F0aW9uIDFcXFwiLFxcXCJkZWZhdWx0XFxcIjp0cnVlLFxcXCJ0aW1lWm9uZVxcXCI6XFxcIkFzaWEvQWxtYXR5XFxcIixcXFwiZW1haWxcXFwiOlxcXCJoZWxsb0BhaG95bGEuY29tXFxcIixcXFwiYWRkcmVzc1xcXCI6e1xcXCJjb3VudHJ5XFxcIjpcXFwiQ1pcXFwiLFxcXCJzdHJlZXRBZGRyZXNzXFxcIjp7fX0sXFxcInJldmlzaW9uXFxcIjpcXFwiM1xcXCJ9fSxcXFwicmF0ZVxcXCI6e1xcXCJwcmljZVRleHRcXFwiOlxcXCJcXFwifSxcXFwidGFnc1xcXCI6W1xcXCJHUk9VUFxcXCJdLFxcXCJvbmxpbmVDb25mZXJlbmNlXFxcIjp7XFxcImd1ZXN0VXJsXFxcIjpcXFwiaHR0cHM6Ly91czA2d2ViLnpvb20udXMvai84NTAzNzMyNTgzNVxcXCIsXFxcInByb3ZpZGVySWRcXFwiOlxcXCJjNmQxMTFkMS0xYThkLTQ5ZjAtYTc4Yy00ZjE4MjNmYjY1OTJcXFwiLFxcXCJkZXNjcmlwdGlvblxcXCI6XFxcItCj0YDQvtC60Lgg0LDQvdCz0LvQuNC50YHQutC-0LPQviDRj9C30YvQutCwINC00LvRjyDQvdCw0YfQuNC90LDRjtGJ0LjRhVxcXCIsXFxcImNvbmZlcmVuY2VUeXBlXFxcIjpcXFwiT05MSU5FX01FRVRJTkdfUFJPVklERVJcXFwifX0sXFxcImJvb2tlZFJlc291cmNlc1xcXCI6W3tcXFwiaWRcXFwiOlxcXCJlNzg2YTY1Ny01MjU3LTQ3N2YtODg2Ni1iNmY5ZmRkMWNmYWVcXFwiLFxcXCJuYW1lXFxcIjpcXFwiVmxhZGltaXJcXFwiLFxcXCJlbWFpbFxcXCI6XFxcInNvcmFzaGlyb3NvcmFAZ21haWwuY29tXFxcIn1dLFxcXCJmb3JtSW5mb1xcXCI6e1xcXCJjb250YWN0RGV0YWlsc1xcXCI6e1xcXCJjb250YWN0SWRcXFwiOlxcXCI2Nzk3NjMxYy00Nzk1LTQwMDctYWVhMS1kMDc4MTJhYjQ4ZWFcXFwiLFxcXCJmaXJzdE5hbWVcXFwiOlxcXCJZdXN1ZmJlayBTdWxheW1vbm92XFxcIixcXFwiZW1haWxcXFwiOlxcXCJ1emd1aXRhcmlzdDk4QGdtYWlsLmNvbVxcXCIsXFxcInBob25lXFxcIjpcXFwiODkzNDE3ODk5OFxcXCIsXFxcInRpbWVab25lXFxcIjpcXFwiQXNpYS9UYXNoa2VudFxcXCIsXFxcImNvdW50cnlDb2RlXFxcIjpcXFwiXFxcIn0sXFxcInBheW1lbnRTZWxlY3Rpb25cXFwiOlt7XFxcIm51bWJlck9mUGFydGljaXBhbnRzXFxcIjoxfV19LFxcXCJwYXltZW50RGV0YWlsc1xcXCI6e1xcXCJwYWlkUGxhbkRldGFpbHNcXFwiOntcXFwicGxhblxcXCI6e1xcXCJvcmRlcklkXFxcIjpcXFwiZWY3Yjk1M2ItNDQ1Ny00MjllLWFjOGItODA3MTkzMjEwOGQ0XFxcIixcXFwiYmVuZWZpdElkXFxcIjpcXFwiNjJmOTQ4NmUtM2MyNi00ZWI3LTk3OTUtZWU0NjM1Y2I4MWFlXFxcIixcXFwicGxhbklkXFxcIjpcXFwiNWI3NWQxOGYtZjM0Mi00ZjNjLWEwMTMtM2IzNjI4NGYyMTA2XFxcIn0sXFxcInBsYW5OYW1lXFxcIjpcXFwiNjAg0YPRgNC-0LrQvtCyIDIwJSDRgdC60LjQtNC60LBcXFwiLFxcXCJ0cmFuc2FjdGlvbklkXFxcIjpcXFwiMDAzNzA4NDctODY1YS00NDJmLWI5ZmItMzIyYmYyOTM3NTIwXFxcIn0sXFxcInN0YXRlXFxcIjpcXFwiQ0FOQ0VMRURcXFwifSxcXFwic3RhdHVzXFxcIjpcXFwiQ0FOQ0VMRURcXFwiLFxcXCJjcmVhdGVkXFxcIjpcXFwiMjAyMS0wOC0yN1QwNDowODo0Mi4yMDlaXFxcIixcXFwiY3JlYXRlZERhdGVcXFwiOlxcXCIyMDIxLTA4LTI3VDA0OjA4OjQyLjIwOVpcXFwiLFxcXCJib29raW5nU291cmNlXFxcIjp7XFxcInBsYXRmb3JtXFxcIjpcXFwiV0VCXFxcIixcXFwiYWN0b3JcXFwiOlxcXCJDVVNUT01FUlxcXCIsXFxcImFwcERlZklkXFxcIjpcXFwiMTNkMjFjNjMtYjVlYy01OTEyLTgzOTctYzNhNWRkYjI3YTk3XFxcIixcXFwiYXBwTmFtZVxcXCI6XFxcIldpeCBCb29raW5nc1xcXCJ9fSxcXFwibm90aWZ5UGFydGljaXBhbnRzXFxcIjp0cnVlLFxcXCJwcmV2aW91c0Jvb2tpbmdcXFwiOntcXFwiaWRcXFwiOlxcXCIwMDIyN2IyMS1mMDI4LTQ2ZjktYmQxZS1lODVjNzExODU5MzBcXFwiLFxcXCJib29rZWRFbnRpdHlcXFwiOntcXFwic2VydmljZUlkXFxcIjpcXFwiOGQxM2Q4MWQtNTQ2MS00OWU3LWI5ZjgtMzk0MjFkZjQ5ZTY0XFxcIixcXFwic2NoZWR1bGVJZFxcXCI6XFxcImEzMTZkMTM4LTkxNTYtNDViNi04NWYxLTViZDZmNzNlYmZlNVxcXCIsXFxcInNpbmdsZVNlc3Npb25cXFwiOntcXFwic2Vzc2lvbklkXFxcIjpcXFwiMm1tb1cwdndLY1NGeXh0T2ZDZE1lSFZUSzBiY3JYMmR6QkdwbnQybHdpQ2kxcTZJejQyeGlxQnFiYk5tRU1vTmdpR05INWN1NzNSNkpjbEtnWU50QjBkMlBnVmtzSW95SzNLdlxcXCIsXFxcInN0YXJ0XFxcIjpcXFwiMjAyMS0wOC0yN1QxMzowMDowMFpcXFwiLFxcXCJlbmRcXFwiOlxcXCIyMDIxLTA4LTI3VDE0OjAwOjAwWlxcXCJ9LFxcXCJ0aXRsZVxcXCI6XFxcItCj0YDQvtC60Lgg0LDQvdCz0LvQuNC50YHQutC-0LPQviDRj9C30YvQutCwINC00LvRjyDQvdCw0YfQuNC90LDRjtGJ0LjRhVxcXCIsXFxcImxvY2F0aW9uXFxcIjp7XFxcImxvY2F0aW9uVHlwZVxcXCI6XFxcIk9XTkVSX0JVU0lORVNTXFxcIixcXFwiYnVzaW5lc3NMb2NhdGlvblxcXCI6e1xcXCJpZFxcXCI6XFxcImI3NDVhMTUwLWJlYzctNDU0Ni04NjUxLTIzMDc0ZjFkMWQ2M1xcXCIsXFxcIm5hbWVcXFwiOlxcXCJMb2NhdGlvbiAxXFxcIixcXFwiZGVmYXVsdFxcXCI6dHJ1ZSxcXFwidGltZVpvbmVcXFwiOlxcXCJBc2lhL0FsbWF0eVxcXCIsXFxcImVtYWlsXFxcIjpcXFwiaGVsbG9AYWhveWxhLmNvbVxcXCIsXFxcImFkZHJlc3NcXFwiOntcXFwiY291bnRyeVxcXCI6XFxcIkNaXFxcIixcXFwic3RyZWV0QWRkcmVzc1xcXCI6e319LFxcXCJyZXZpc2lvblxcXCI6XFxcIjNcXFwifX0sXFxcInJhdGVcXFwiOntcXFwicHJpY2VUZXh0XFxcIjpcXFwiXFxcIn0sXFxcInRhZ3NcXFwiOltcXFwiR1JPVVBcXFwiXSxcXFwib25saW5lQ29uZmVyZW5jZVxcXCI6e1xcXCJndWVzdFVybFxcXCI6XFxcImh0dHBzOi8vdXMwNndlYi56b29tLnVzL2ovODUwMzczMjU4MzVcXFwiLFxcXCJwcm92aWRlcklkXFxcIjpcXFwiYzZkMTExZDEtMWE4ZC00OWYwLWE3OGMtNGYxODIzZmI2NTkyXFxcIixcXFwiZGVzY3JpcHRpb25cXFwiOlxcXCLQo9GA0L7QutC4INCw0L3Qs9C70LjQudGB0LrQvtCz0L4g0Y_Qt9GL0LrQsCDQtNC70Y8g0L3QsNGH0LjQvdCw0Y7RidC40YVcXFwiLFxcXCJjb25mZXJlbmNlVHlwZVxcXCI6XFxcIk9OTElORV9NRUVUSU5HX1BST1ZJREVSXFxcIn19LFxcXCJib29rZWRSZXNvdXJjZXNcXFwiOlt7XFxcImlkXFxcIjpcXFwiZTc4NmE2NTctNTI1Ny00NzdmLTg4NjYtYjZmOWZkZDFjZmFlXFxcIixcXFwibmFtZVxcXCI6XFxcIlZsYWRpbWlyXFxcIixcXFwiZW1haWxcXFwiOlxcXCJzb3Jhc2hpcm9zb3JhQGdtYWlsLmNvbVxcXCJ9XSxcXFwiZm9ybUluZm9cXFwiOntcXFwiY29udGFjdERldGFpbHNcXFwiOntcXFwiY29udGFjdElkXFxcIjpcXFwiNjc5NzYzMWMtNDc5NS00MDA3LWFlYTEtZDA3ODEyYWI0OGVhXFxcIixcXFwiZmlyc3ROYW1lXFxcIjpcXFwiWXVzdWZiZWsgU3VsYXltb25vdlxcXCIsXFxcImVtYWlsXFxcIjpcXFwidXpndWl0YXJpc3Q5OEBnbWFpbC5jb21cXFwiLFxcXCJwaG9uZVxcXCI6XFxcIjg5MzQxNzg5OThcXFwiLFxcXCJ0aW1lWm9uZVxcXCI6XFxcIkFzaWEvVGFzaGtlbnRcXFwiLFxcXCJjb3VudHJ5Q29kZVxcXCI6XFxcIlxcXCJ9LFxcXCJwYXltZW50U2VsZWN0aW9uXFxcIjpbe1xcXCJudW1iZXJPZlBhcnRpY2lwYW50c1xcXCI6MX1dfSxcXFwicGF5bWVudERldGFpbHNcXFwiOntcXFwicGFpZFBsYW5EZXRhaWxzXFxcIjp7XFxcInBsYW5cXFwiOntcXFwib3JkZXJJZFxcXCI6XFxcImVmN2I5NTNiLTQ0NTctNDI5ZS1hYzhiLTgwNzE5MzIxMDhkNFxcXCIsXFxcImJlbmVmaXRJZFxcXCI6XFxcIjYyZjk0ODZlLTNjMjYtNGViNy05Nzk1LWVlNDYzNWNiODFhZVxcXCIsXFxcInBsYW5JZFxcXCI6XFxcIjViNzVkMThmLWYzNDItNGYzYy1hMDEzLTNiMzYyODRmMjEwNlxcXCJ9LFxcXCJwbGFuTmFtZVxcXCI6XFxcIjYwINGD0YDQvtC60L7QsiAyMCUg0YHQutC40LTQutCwXFxcIixcXFwidHJhbnNhY3Rpb25JZFxcXCI6XFxcIjAwMzcwODQ3LTg2NWEtNDQyZi1iOWZiLTMyMmJmMjkzNzUyMFxcXCJ9LFxcXCJzdGF0ZVxcXCI6XFxcIkNPTVBMRVRFXFxcIn0sXFxcInN0YXR1c1xcXCI6XFxcIkNPTkZJUk1FRFxcXCIsXFxcImNyZWF0ZWRcXFwiOlxcXCIyMDIxLTA4LTI3VDA0OjA4OjQyLjIwOVpcXFwiLFxcXCJjcmVhdGVkRGF0ZVxcXCI6XFxcIjIwMjEtMDgtMjdUMDQ6MDg6NDIuMjA5WlxcXCIsXFxcImJvb2tpbmdTb3VyY2VcXFwiOntcXFwicGxhdGZvcm1cXFwiOlxcXCJXRUJcXFwiLFxcXCJhY3RvclxcXCI6XFxcIkNVU1RPTUVSXFxcIixcXFwiYXBwRGVmSWRcXFwiOlxcXCIxM2QyMWM2My1iNWVjLTU5MTItODM5Ny1jM2E1ZGRiMjdhOTdcXFwiLFxcXCJhcHBOYW1lXFxcIjpcXFwiV2l4IEJvb2tpbmdzXFxcIn19LFxcXCJwYXJ0aWNpcGFudE5vdGlmaWNhdGlvblxcXCI6e1xcXCJub3RpZnlQYXJ0aWNpcGFudHNcXFwiOnRydWV9LFxcXCJzZW5kU21zUmVtaW5kZXJcXFwiOmZhbHNlfVwiLFwiaW5zdGFuY2VJZFwiOlwiOTE0M2U0OTQtZjY3Yy00NGUzLThiOTYtYWY5ZjQ4OTY5ODI3XCIsXCJldmVudFR5cGVcIjpcImNvbS53aXguYm9va2luZ3MuYXBpLnYxLkJvb2tpbmdOb3RpZmljYXRpb25cIn0iLCJpYXQiOjE2MzAwMzk0NDcsImV4cCI6MTYzMzYzOTQ0N30.B9tfyRBlLbtnXSR7AS_aVRwxN3KgoQBVQiPsnc7u1lZ7PdO00YdeAPfzRJAWm8L1uCy-rGWrY9alXlBDdt1I-IxRsfCk_f_abErHbECT2WVoV0B-JAwZS6kVNJkNlGKoqZDD006wZSPquW2ii4M45SPaC7cvhwRPqGk3SktNmzm6Yz4o6ohjm8pHyy7gfev_wFNKC26iUMu8AKq7oFAJj1wVoixkFE5BCniVgIX_yq7p3Fx5v9CPCt8csDCxOhjWtMhfXF9FVGazLR1W9pLd8C8GY8aRCoQJbarSURZeqYRWeh-AL0GaMDZjDEWZFNvqvnUVb_YY9LGTQm_DgMz6Mw";*/
-
 if(!empty($jwt)){
 
     $decoded = JWT::decode($jwt, $key, array('RS256'));
-
     $decoded_array = (array)$decoded;
     $decoded_array2 = json_decode($decoded_array['data'],true);
     $text = "\xB1\x31";
-
     $json  = json_decode($decoded_array2['data'],true);
     $error = json_last_error();
-var_dump($json);
-
-
-   file_put_contents("result.json",$decoded_array2);
-
-
-
-
-        // Создание клиента
-
-
-        $subdomain = 'nemusedu';            // Поддомен в амо срм
-        $login = 'sales@nemusedu.com';            // Логин в амо срм
-        $hash = '625b96ef1b96b086434cefb4c052f6991bc999a6';            // api ключ
+    var_dump($json);
+    file_put_contents("result.json",$decoded_array2);
+    // Создание клиента
+    $subdomain = 'nemusedu';            // Поддомен в амо срм
+    $login = 'sales@nemusedu.com';            // Логин в амо срм
+    $hash = '625b96ef1b96b086434cefb4c052f6991bc999a6';            // api ключ
     $subdomain = 'nemusedu';            // Поддомен в амо срм
     $login = 'sales@nemusedu.com';            // Логин в амо срм
     $hash = '625b96ef1b96b086434cefb4c052f6991bc999a6';            // api ключ
@@ -50,39 +36,34 @@ var_dump($json);
     $account = $amo->account;
     $lead = $amo->lead;
     $contact = $amo->contact;
+    $localTime = date_default_timezone_set($json["booking"]["formInfo"]["contactDetails"]["timeZone"]);
+    $getTimeZone = date_default_timezone_get();
+    $date = new DateTime($json["booking"]["bookedEntity"]["singleSession"]["start"], new DateTimeZone($getTimeZone));
+    $date->setTimezone(new DateTimeZone($json["booking"]["formInfo"]["contactDetails"]["timeZone"]));
+    $final = $date->format('d.m.Y H:i');
     $clName = $json["booking"]["formInfo"]["contactDetails"]["firstName"];
     $email = $json["booking"]["formInfo"]["contactDetails"]["email"];
     $phone = $json["booking"]["formInfo"]["contactDetails"]["phone"];
     $wid = $json["booking"]["formInfo"]["contactDetails"]["contactId"];
-
+    /*   $locaTimeCheck = date($localTime);*/
     $classname = $json['booking']["bookedEntity"]["onlineConference"]["description"];
     $classUrl = $json['booking']["bookedEntity"]["onlineConference"]["guestUrl"];
     $start = $json["booking"]["bookedEntity"]["singleSession"]["start"];
-
+    $classReminder = true;
     $lead->addCustomField(507989,$classUrl);
     $lead->addCustomField(520605,$classname);
     $lead->addCustomField(318877,$clName);
     $lead->addCustomField(164457,$email,'WORK');
     $lead->addCustomField(164455,$phone,'WORK');
     $lead->addCustomField(509651,$start);
-    $lead->addCustomField(520047,$wid);
-
-
-
-
+    $lead->addCustomField(520641,$classReminder);
+    $lead->addCustomField(520739,$final,'GTM');
     $contact->addCustomField(164457,$email,'WORK');
     $contact->addCustomField(164455,$phone,'WORK');
     $contact->addCustomField(520047,$wid);
     $contact['linked_leads_id'] = $lead ->apiAdd();
-
-
+    $contact['name'] = isset($json["booking"]["formInfo"]["contactDetails"]["firstName"]) ? $json["booking"]["formInfo"]["contactDetails"]["firstName"] : 'not found';
     $contact->apiAdd();
-
-
-
-
-
-
 }
 
 
